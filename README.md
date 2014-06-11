@@ -35,6 +35,16 @@ working installations of the following:
 - ios sdk (i.e. xcode, ios simulator)
 
 
+How To Use (quick runthrough for android)
+==========================================
+- open browser and navigate to the projects index.html (like <project-home>/web-client/index.html ), enjoy the page
+- run one of the initial build-scripts, e.g. 0_completebuild_android.sh 
+- copy the project/build/platforms/android/bin/project-debug-unaligned.apk to your android phone (via adb, airdroid or other means), start! You should see what you've seen on the desktop-browser: the template index.html this time rendered in a cordova webview.
+- now change and enrich the sources under web-client according to your needs
+- test and improve with the use of a local browser like firefox/firebug or chrome either via file:/// or local httpd
+- rebuild using the provided 0_rebuild_web_resources.sh
+
+
 Improvements for some distant future
 ====================================
 - The scripts are known to work under osx and linux, windows / cygwin may not work properly.
