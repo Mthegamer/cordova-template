@@ -1,7 +1,7 @@
-cordova-skeleton 
-================
+cordova template skeleton 
+==========================
 
-You want to start with cordova / phonegap? Here is a skeleton or template that provides you with basic stuff needed!
+You want to start a new cordova / phonegap project? This template project provides you with basic stuff need to jumpstart. It comes with some modernish HTML5 and JavaScript components already woven together, provides basic configuration and correctly sized and named placeholders for icons and screens.
 
 WARNING: currently this project is not in a state to be used by beginners, maybe it is even just nonsense to others. It exists mainly for my own purposes. If you still want to try: good luck!
 
@@ -11,18 +11,18 @@ If you have suggestions to change or improve, or even want to participate, you'r
 FEATURES
 ========
 
-- all set up environment with index.html that includes javascript initialization and some useful js-libs
-- directory structure to guide you creating the necessary artifacts for cordova, android and ios
+- all set up environment with index.html that includes some useful js-libs
+- directory structure with template files to guide you creating the necessary artifacts for cordova, android and ios
 - you can develop the whole app just using your favorite editor and a web-browser for local testing
-- build-scripts that (under some premises) can rebuild the whole cordova infrastructure
-- run and test using the simulators (that are provided from 3rd parties, not included here)
+- build-scripts that (under some premises) can rebuild the whole cordova (phonegap) infrastructure
+- run and test using desktop / mobile browsers or simulators (these are provided from 3rd parties, not included here)
 - environment detection (browser, app, platform) to be used for environment-specific code
-- i18n for multi-language apps
-- geolocation helper (provides better results than just using built-in html5 geolocation api)
-- knockout.js mvc (or mvvm)
-- hammer.js for touch-events (bound to knockout using knockouch.js)
-- works with different cordova-versions
-- works with different android and ios versions
+- builtin i18n for multi-language apps
+- builtin geolocation helper (provides better results than just using built-in html5 geolocation api)
+- builtin knockout.js mvc (or mvvm)
+- builtin hammer.js for touch-events (bound to knockout using knockouch.js)
+- works with different cordova-versions (depends on your local setup), as long as the command-line tools haven't changed
+- works with different android and ios versions (see cordova and platform configurations)
 
 
 Prerequisites
@@ -37,12 +37,14 @@ working installations of the following:
 
 How To Use (quick runthrough for android)
 ==========================================
-- open browser and navigate to the projects index.html (like <project-home>/web-client/index.html ), enjoy the page
-- run one of the initial build-scripts, e.g. 0_completebuild_android.sh 
-- copy the project/build/platforms/android/bin/project-debug-unaligned.apk to your android phone (via adb, airdroid or other means), start! You should see what you've seen on the desktop-browser: the template index.html this time rendered in a cordova webview.
+- install cordova, java, android sdk (not explained here)
+- open browser and navigate to the template project's index.html (like <project-home>/web-client/index.html ), enjoy the page
+- run build-scripts/0_completebuild_android.sh 
+- copy the project/build/platforms/android/bin/project-debug-unaligned.apk to your android phone (via adb, airdroid or other means) and start! You should see what you've seen on the desktop-browser: the template index.html this time rendered in a cordova webview.
 - now change and enrich the sources under web-client according to your needs
+- for better end-user experience change project name and icons / screens
 - test and improve with the use of a local browser like firefox/firebug or chrome either via file:/// or local httpd
-- rebuild using the provided 0_rebuild_web_resources.sh
+- repeatedly rebuild anytime using the provided 0_rebuild_web_resources.sh
 
 
 Improvements for some distant future
