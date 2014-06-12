@@ -1,6 +1,18 @@
 #!/bin/bash
 echo "START: partial rebuild all platforms"
 echo "*******************************************************************"
+
+CONFIG_FILE=0_0_configuration.conf
+
+if [[ -f $CONFIG_FILE ]]; then
+        . $CONFIG_FILE
+else
+    echo "ERROR reading config!"
+    exit 1;
+fi
+
+echo "projectname = $PROJECT_NAME, build-dir = $BUILD_DIR"
+
 ./6_sync_android_resources.sh
 ./6_sync_ios_resources.sh
 ./7_sync_web_app.sh

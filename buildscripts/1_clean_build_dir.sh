@@ -3,15 +3,25 @@
 echo "START: CLEAN"
 echo "*******************************************************************"
 
-if [ -d "../target" ]
+
+CONFIG_FILE=0_0_configuration.conf
+
+if [[ -f $CONFIG_FILE ]]; then
+        . $CONFIG_FILE
+else
+    echo "ERROR reading config!"
+    exit 1;
+fi
+
+if [ -d "$BUILD_DIR" ]
 then
     echo "cleaning build directory!"
 #    read -p "Press [Enter] to continue"
-    rm -rf ../target
+    rm -rf $BUILD_DIR
 else
-    echo " creating... build directory"
+    echo " creating build directory"
 #    read -p "Press [Enter] to continue"
-    mkdir ../target
+    mkdir $BUILD_DIR
 fi
 echo "END: CLEAN"
 echo "*******************************************************************"

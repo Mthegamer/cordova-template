@@ -4,19 +4,19 @@
 
 function ViewModel() {
     // Properties
-    
+
     this.geoLatitude = ko.observable();
     this.geoLongitude = ko.observable();
-    
-    this.viewState = {header:"",content:"",mainview:""}
+
+    this.viewState = {header: "", content: "", mainview: ""}
 
 
 }
 
-ViewModel.prototype.setGeo = function(lon, lat) {
+ViewModel.prototype.setGeo = function (lon, lat) {
 
-	this.geoLatitude(lat);
-	this.geoLongitude(lon);
+    this.geoLatitude(lat);
+    this.geoLongitude(lon);
 }
 
 

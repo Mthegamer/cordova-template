@@ -2,19 +2,23 @@
 
 cordova=`which cordova`
 
-BUILDDIR=../target/project
-
-WWWDIR="$BUILDDIR/www"
-
-
-WD=`pwd`
 
 
 echo "START: sync web-app"
 echo "*******************************************************************"
 
+CONFIG_FILE=0_0_configuration.conf
 
-if [ -d "../target" ]
+if [[ -f $CONFIG_FILE ]]; then
+        . $CONFIG_FILE
+else
+    echo "ERROR reading config!"
+    exit 1;
+fi
+
+WWWDIR="$BUILD_DIR/$PROJECT_NAME/www"
+
+if [ -d "$BUILD_DIR" ]
 then
     echo ""
 else

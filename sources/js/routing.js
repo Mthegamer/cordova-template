@@ -53,7 +53,7 @@ var routing = $.sammy(function () {
 
     // START ROUTES: below are definitions of routes that are reachable via # urls, so virtually any possible gui changes!
 
-    
+
     this.notFound = function () {
         routing.setLocation('#/');
     }
@@ -66,17 +66,16 @@ var routing = $.sammy(function () {
     function setNewViewState(viewstate) {
 
 
-            console.log('D: setting header to: ' + viewstate.header);
+        console.log('D: setting header to: ' + viewstate.header);
         viewModel.viewState.header(viewstate.header);
 
-            console.log('D: setting content to: ' + viewstate.content);
+        console.log('D: setting content to: ' + viewstate.content);
         viewModel.viewState.content(viewstate.content);
 
-            console.log('D: setting mainview to:' + viewstate.mainview);
+        console.log('D: setting mainview to:' + viewstate.mainview);
         viewModel.viewState.mainview(viewstate.mainview);
     }
 
-   
 
     function saveCurrentViewState(direction) {
         if (typeof direction === 'undefined') direction = 'viewStateHistory';
@@ -99,7 +98,7 @@ var routing = $.sammy(function () {
 
     }
 
-    
+
     this.navigateTo = function navigateTo(target) {
         saveCurrentViewState();
         if (config.debugMode) {

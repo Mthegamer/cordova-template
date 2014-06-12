@@ -2,9 +2,9 @@
 
 cordova=`which cordova`
 
-BUILDDIR=../target/project
+#BUILDDIR=$BUILD_DIR/project
 
-WWWDIR="$BUILDDIR/www"
+#WWWDIR="$BUILDDIR/www"
 
 
 WD=`pwd`
@@ -12,8 +12,16 @@ WD=`pwd`
 echo "START: sync android resources"
 echo "*******************************************************************"
 
+CONFIG_FILE=0_0_configuration.conf
 
-if [ -d "../target" ]
+if [[ -f $CONFIG_FILE ]]; then
+        . $CONFIG_FILE
+else
+    echo "ERROR reading config!"
+    exit 1;
+fi
+
+if [ -d "$BUILD_DIR" ]
 then
     echo ""
 else
@@ -24,7 +32,7 @@ fi
 
 echo -e "\n************************************\nsyncing android resources"
 
-rsync -ah ../cordova/android/icon/* "$BUILDDIR"/platforms/android/res/
+rsync -ah ../cordova/android/icon/* "$BUILD_DIR/$PROJECT_NAME"/platforms/android/res/
 echo "END: sync android resources"
 echo "*******************************************************************"
 

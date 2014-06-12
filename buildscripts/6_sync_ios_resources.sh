@@ -2,9 +2,9 @@
 
 cordova=`which cordova`
 
-BUILDDIR=../target/project
 
-WWWDIR="$BUILDDIR/www"
+
+#WWWDIR="$BUILDDIR/www"
 
 
 WD=`pwd`
@@ -12,8 +12,16 @@ WD=`pwd`
 echo "START: sync iOS resources"
 echo "*******************************************************************"
 
+CONFIG_FILE=0_0_configuration.conf
 
-if [ -d "../target" ]
+if [[ -f $CONFIG_FILE ]]; then
+        . $CONFIG_FILE
+else
+    echo "ERROR reading config!"
+    exit 1;
+fi
+
+if [ -d "$BUILD_DIR" ]
 then
     echo ""
 else
@@ -23,7 +31,7 @@ fi
 
 echo -e "\n************************************\npreparing ios resources"
 
-IOSRES="$BUILDDIR"/platforms/ios/project/Resources
+IOSRES="$BUILD_DIR/$PROJECT_NAME"/platforms/ios/project/Resources
 
 if [ -d $IOSRES ]
 then
@@ -31,13 +39,13 @@ then
     rm "$IOSRES"/icons/*
     rm "$IOSRES"/splash/*
 else
-    echo "something went wrong, ios reources dir does not exist!"
+    echo "something went wrong, ios resources dir does not exist!"
     exit 1
 fi
 
 echo "copying ios resources"
-rsync -ah ../cordova/ios/icon/* "$IOSRES"/icons
-rsync -ah ../cordova/ios/screen/* "$IOSRES"/splash
+rsync -ah "$WD"../cordova/ios/icon/* "$IOSRES"/icons
+rsync -ah "$WD"../cordova/ios/screen/* "$IOSRES"/splash
 
 
 cd "$BUILDDIR"

@@ -1,7 +1,6 @@
 #!/bin/bash
 
-BUILDDIR=../target/project
 
-cd "$BUILDDIR"
+cd "$BUILD_DIR/$PROJECT_NAME"
 
 cordova run android

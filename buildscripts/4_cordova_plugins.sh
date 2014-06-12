@@ -4,12 +4,19 @@
 
 cordova=`which cordova`
 
-BUILDDIR=../target/project
-
-cd "$BUILDDIR"
-
 echo "START: cordova PLUGINS"
 echo "*******************************************************************"
+
+CONFIG_FILE=0_0_configuration.conf
+
+if [[ -f $CONFIG_FILE ]]; then
+        . $CONFIG_FILE
+else
+    echo "ERROR reading config!"
+    exit 1;
+fi
+
+cd "$BUILD_DIR/$PROJECT_NAME"
 
 
 INSTALLED_PLUGINS=`cordova plugins ls`

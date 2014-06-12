@@ -2,25 +2,32 @@
 
 cordova=`which cordova`
 
-PROJECTNAME=project
-PROJECTPACKAGE=org.project.mobile
-BUILDDIR=project
 
 echo "START: creating cordova project"
 echo "*******************************************************************"
 
-if [ -d "../target" ]
+CONFIG_FILE=0_0_configuration.conf
+
+if [[ -f $CONFIG_FILE ]]; then
+        . $CONFIG_FILE
+else
+    echo "ERROR reading config!"
+    exit 1;
+fi
+
+
+if [ -d "$BUILD_DIR" ]
 then
     echo "cleaning build directory!"
 #    read -p "Press [Enter] to continue"
-    rm -rf ../target/*
+    rm -rf $BUILD_DIR/*
 else
     echo " creating... build directory"
 #    read -p "Press [Enter] to continue"
-    mkdir ../target
+    mkdir $BUILD_DIR
 fi
 
-cd ../target
+cd $BUILD_DIR
 
 WD=`pwd`
 
@@ -28,12 +35,12 @@ echo "current directory:" $WD
 
 
 echo "creating cordova project"
-echo -e "\n cordova create " $PROJECTNAME $PROJECTPACKAGE $BUILDDIR
-cordova create "$PROJECTNAME" "$PROJECTPACKAGE" "$BUILDDIR"
+#echo -e "\n cordova create " $PROJECT_NAME $PROJECT_PACKAGE $BUILD_DIR
+cordova create $BUILD_DIR/$PROJECT_NAME   $PROJECT_PACKAGE  $PROJECT_NAME
 
-if [ -d "$BUILDDIR" ]
+if [ -d "$BUILD_DIR/$PROJECT_NAME" ]
 then
-    cd "$BUILDDIR"
+    cd "$BUILD_DIR/$PROJECT_NAME"
 else
     echo "CORDOVA PROJECT NOT CREATED! exiting..."
     exit 1

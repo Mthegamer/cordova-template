@@ -4,8 +4,6 @@ viewModel = new ViewModel();
 geoLocation = new GeoLocation();
 
 
-
-
 project_env = "browser";
 project_platform = "desktop";
 useragent = navigator.userAgent.toLowerCase();
@@ -85,7 +83,7 @@ var app = {
         },
 
         backbutton: function () {
-           if (routing.viewStateHistory.length > 0) {
+            if (routing.viewStateHistory.length > 0) {
                 routing.navigateBack();
             } else {
                 app.exitFromApp();
@@ -97,14 +95,14 @@ var app = {
             console.log('devready: project running on ' + project_env + ' / ' + project_platform);
 
             if (viewModel == null || typeof viewModel === 'undefined') {
-                viewModel = new ViewModel();   
+                viewModel = new ViewModel();
             }
 
             $(document).ready(function () {
 
-            
+
                 geoLocation.startWatchingGeo(10000);
-                    console.log("Finished initializing.");
+                console.log("Finished initializing.");
 
                 ko.applyBindings(viewModel, document.getElementById('knockmeout'));
                 routing.raise_errors = true;
@@ -115,7 +113,7 @@ var app = {
                 if (insidecordova) {
                 }
                 FastClick.attach(document.body);
-          });  
+            });
         }
     }
     ;

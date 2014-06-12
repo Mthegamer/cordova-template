@@ -33,7 +33,7 @@ function GeoLocation() {
     }
 
     this.startWatchingGeo = function () {
-            console.log("geo: starting up...");
+        console.log("geo: starting up...");
         geoLocation.locateMe();
         geoID = window.setInterval(geoLocation.locateMe, 30000);
     }
@@ -48,7 +48,7 @@ function GeoLocation() {
     this.locateMe = function () {
         locationEventCount = 0;
         if (watchID == null) {
-                console.log("geo: searching position");
+            console.log("geo: searching position");
             geoLocation.useLastPosition();
             geoLocation.stillInProgress = true;
             geoLocation.getPrecise();
@@ -68,18 +68,18 @@ function GeoLocation() {
     this.updateClient = function (position) {
 //        utils.message("position updated");
 
-            console.log("position updated");
+        console.log("position updated");
 
         viewModel.setGeo(position.longitude, position.latitude);
 
-      
+
     }
 
     this.geoProgress = function (position) {
 
         geoLocation.updateClient({longitude: position.coords.longitude, latitude: position.coords.latitude});
 //        if (config.debugMode)
-            console.log('geo: coarse position found');
+        console.log('geo: coarse position found');
     }
 
 
@@ -92,12 +92,12 @@ function GeoLocation() {
         }
 
         if (msg.code == 2) {//PositionError.POSITION_UNAVAILABLE) {
-                console.log("geo: error: position unavailable");
+            console.log("geo: error: position unavailable");
         }
 
         if (msg.code == 3) {// PositionError.TIMEOUT) {
         }
-            console.log("geo: error: timeout");
+        console.log("geo: error: timeout");
     }
 
     this.useLastPosition = function () {
@@ -127,7 +127,7 @@ function GeoLocation() {
         if (lastCheckedPosition) {
             geoLocation.foundPosition(lastCheckedPosition);
         } else {
-                console.log("giving up without finding accurate position...");
+            console.log("giving up without finding accurate position...");
         }
     };
 
