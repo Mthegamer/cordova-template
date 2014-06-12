@@ -1,0 +1,4 @@
+jQuery.i18n.en.strings = {
+"timeout_message":"Network problem (timeout)!",
+
+}
