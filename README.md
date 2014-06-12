@@ -1,14 +1,14 @@
 cordova template with shared source
 ===================================
 
-This template project provides you with infrastructure and scripts to jumpstart a shared source cordova (phonegap) project. It provides some modernish HTML5 and JavaScript components already woven together, a basic configuration and correctly sized and named placeholders for icons and screens. You can instantly start developing the web-app and be able to build apps for multiple platforms by just running a script without changing any parameters. All platforms share the same source!
+This template project provides some infrastructure and scripts to JUMPSTART a shared source cordova (phonegap) project. You can instantly focus on developing the web-app, using the already woven together HTML5 and JavaScript components, a basic configuration and correctly sized and named placeholders for icons and screens. Build apps for multiple platforms ANYTIME by just running a script without changing any parameters. All platforms share the same source!
 
 WARNING: currently this project is not in a state to be used by beginners, maybe it is even just nonsense to others. It exists mainly for my own purposes. If you still want to try: good luck!
 
 If you have suggestions to change or improve, or even want to participate, you're very welcome to do so. See "Improvements for some distant future"
 
 
-FEATURES
+Features
 ========
 
 - all set up environment with index.html that includes some useful js-libs
@@ -27,12 +27,13 @@ FEATURES
 
 Prerequisites
 =============
-working installations of the following:
+- a machine that natively runs bash (preferably Linux or OSX) with working installations of the following:
+- java (needed for cordova / phonegap)
+- apache ant (needed for cordova / phonegap)
 - phonegap (2.x or 3.x)
-- java
-- apache ant
-- android sdk
-- ios sdk (i.e. xcode, ios simulator)
+- android sdk (use lates available)
+- ios sdk (i.e. xcode, ios simulator), required for ios builds, requires a Mac / OSX
+
 
 
 How To Use (quick runthrough for android)
@@ -50,6 +51,9 @@ How To Use (quick runthrough for android)
 
 Improvements for some distant future
 ====================================
-- The scripts are known to work under osx and linux, windows / cygwin may not work properly.
-- The scripts contain lots of stuff that could be parameterized and improved. 
+- make nice demo app that shows all provided capabilities and sample code
+- extend documentation so that beginners have at least a clue what's happening and where to turn the screws for changes
 - The whole half-bakedness of this project can be improved
+- The scripts contain lots of stuff that could be parameterized and improved.
+- provide scripts for other target platforms (Tizen, Windows Mobile,...)
+- scripts for other build platforms (Windows, what else?)
