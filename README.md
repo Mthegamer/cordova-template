@@ -39,6 +39,7 @@ How To Use (quick runthrough for android)
 ==========================================
 - install cordova, java, android sdk (not explained here)
 - open browser and navigate to the template project's index.html (like <project-home>/web-client/index.html ), enjoy the page
+- edit buildscripts 0_0_config.conf to your likings
 - run build-scripts/0_completebuild_android.sh 
 - copy the project/build/platforms/android/bin/project-debug-unaligned.apk to your android phone (via adb, airdroid or other means) and start! You should see what you've seen on the desktop-browser: the template index.html this time rendered in a cordova webview.
 - now change and enrich the sources under web-client according to your needs
