@@ -1,7 +1,7 @@
-cordova template skeleton 
-==========================
+cordova template with shared source
+===================================
 
-You want to start a new cordova / phonegap project? This template project provides you with basic stuff need to jumpstart. It comes with some modernish HTML5 and JavaScript components already woven together, provides basic configuration and correctly sized and named placeholders for icons and screens.
+This template project provides you with infrastructure and scripts to jumpstart a shared source cordova (phonegap) project. It provides some modernish HTML5 and JavaScript components already woven together, a basic configuration and correctly sized and named placeholders for icons and screens. You can instantly start developing the web-app and be able to build apps for multiple platforms by just running a script without changing any parameters. All platforms share the same source!
 
 WARNING: currently this project is not in a state to be used by beginners, maybe it is even just nonsense to others. It exists mainly for my own purposes. If you still want to try: good luck!
 
