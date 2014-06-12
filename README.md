@@ -10,7 +10,7 @@ If you have suggestions to change or improve, or even want to participate, you'r
 
 Features
 ========
-
+- all builds use the same shared HTML5 source, in contrast to "normal" phonegap per-target-platform-sourcecode
 - all set up environment with index.html that includes some useful js-libs
 - directory structure with template files to guide you creating the necessary artifacts for cordova, android and ios
 - you can develop the whole app just using your favorite editor and a web-browser for local testing
