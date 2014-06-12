@@ -8,7 +8,7 @@ function ViewModel() {
     this.geoLatitude = ko.observable();
     this.geoLongitude = ko.observable();
 
-    this.viewState = {header: "", content: "", mainview: ""}
+    this.viewState = {header: ko.observable(), content: ko.observable(), footer: ko.observable()}
 
 
 }

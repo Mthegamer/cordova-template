@@ -33,9 +33,10 @@ function GeoLocation() {
     }
 
     this.startWatchingGeo = function () {
-        console.log("geo: starting up...");
+        if (config.debugMode)
+            console.log("geo: starting up...");
         geoLocation.locateMe();
-        geoID = window.setInterval(geoLocation.locateMe, 30000);
+        geoID = window.setInterval(geoLocation.locateMe, config.gpsUpdateInterval);
     }
 
     this.stopWatchingGeo = function () {
@@ -48,7 +49,8 @@ function GeoLocation() {
     this.locateMe = function () {
         locationEventCount = 0;
         if (watchID == null) {
-            console.log("geo: searching position");
+            if (config.debugMode)
+                console.log("geo: searching position");
             geoLocation.useLastPosition();
             geoLocation.stillInProgress = true;
             geoLocation.getPrecise();
@@ -60,14 +62,14 @@ function GeoLocation() {
 
         geoLocationFixed = true;
         geoLocation.updateClient({longitude: position.coords.longitude, latitude: position.coords.latitude});
-//        if (config.debugMode)
+        if (config.debugMode)
         console.log('geo: accurate position found');
     }
 
 
     this.updateClient = function (position) {
 //        utils.message("position updated");
-
+        if(config.debugMode)
         console.log("position updated");
 
         viewModel.setGeo(position.longitude, position.latitude);
@@ -78,7 +80,7 @@ function GeoLocation() {
     this.geoProgress = function (position) {
 
         geoLocation.updateClient({longitude: position.coords.longitude, latitude: position.coords.latitude});
-//        if (config.debugMode)
+        if (config.debugMode)
         console.log('geo: coarse position found');
     }
 
@@ -101,7 +103,7 @@ function GeoLocation() {
     }
 
     this.useLastPosition = function () {
-//        if (config.debugMode)
+        if (config.debugMode)
         console.log('geo: using last stored position.');
     }
 

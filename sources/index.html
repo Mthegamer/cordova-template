@@ -10,6 +10,9 @@ it defines just the basic structure with ids to be addressed
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
+<!-- config -->
+    <script src="js/config.js" type="text/javascript"></script>
+
 <!-- style -->
     <link rel="stylesheet" href="css/project.css" type="text/css">
 
@@ -62,20 +65,28 @@ it defines just the basic structure with ids to be addressed
     <title id="page-title">Project</title>
 </head>
 <body id="roooot">
-
-
-<h1>Welcome to the cordova template!</h1>
-If you see some coordinates, then most probably everything is working as expected.
-There is not much else to see... Watch how the position gets updated
-(this binding is done with knockout).
 <div id="knockmeout">
-<br />
-<b>Current position</b>
-<p>
-longitude:<b data-bind="text: geoLongitude"> </b><br />
-latitude:<b data-bind="text: geoLatitude"> </b>
+<div data-bind="template: {name: viewState.header}" id="header"></div>
+<div data-bind="template: {name: viewState.content}" id="content"></div>
+<div data-bind="template: {name: viewState.footer}" id="footer"></div>
 
-</p>
+<script class="externaltemplate" type="text/html" id="defaultHeader"><h1>Welcome to the cordova template!</h1></script>
+<script class="externaltemplate" type="text/html" id="defaultContent">
+
+    If you see some coordinates, then most probably everything is working as expected.
+    There is not much else to see... Watch how the position gets updated
+    (this binding is done with knockout).
+
+    <br />
+    <b>Current position</b>
+    <p>
+        longitude:<b data-bind="text: geoLongitude"> </b><br />
+        latitude:<b data-bind="text: geoLatitude"> </b>
+
+    </p></script>
+<script class="externaltemplate" type="text/html" id="defaultFooter"><hr class="footr" /><div class="footr">no rights reserved!</div></script>
+
+
 </div>
 
 

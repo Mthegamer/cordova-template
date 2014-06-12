@@ -4,46 +4,12 @@ var routing = $.sammy(function () {
 
     var that = this;
 
-    that.intervalRegistry = new Array();
-
-    function startInterval(intervalFunction, timeout) {
-        if ((typeof timeout === 'undefined') || (timeout == '')) {
-            timeout = 30000;
-        }
-        intervalFunction();
-        var interval = setInterval(intervalFunction, timeout);
-        if (config.debugMode)
-            console.log("started interval:" + interval);
-
-        that.intervalRegistry.push(interval);
-    }
-
-    function stopLastInterval() {
-        var current = that.intervalRegistry.pop();
-        clearInterval(current);
-        if (config.debugMode)
-            console.log("cleared interval:" + current);
-    }
-
-    function stopAllIntervals() {
-
-        that.intervalRegistry.forEach(function (current) {
-            clearInterval(current);
-            if (config.debugMode)
-                console.log("cleared interval:" + current);
-        });
-    }
-
-    this.stopNetworkUpdates = function () {
-        stopAllIntervals();
-        console.log("stopped all recurring updates");
-    }
-
-    ViewState = function (location, mainview, content, header) {
+    ViewState = function (location, header, content, footer) {
         this.location = location;
-        this.mainview = mainview;
-        this.content = content;
         this.header = header;
+        this.content = content;
+        this.footer = footer;
+
     }
 
     // Override this function so that Sammy doesn't mess with forms
@@ -53,6 +19,11 @@ var routing = $.sammy(function () {
 
     // START ROUTES: below are definitions of routes that are reachable via # urls, so virtually any possible gui changes!
 
+    this.get ('#/', function(){
+        vs = new ViewState('#/', "defaultHeader", "defaultContent", "defaultFooter");
+        setNewViewState(vs);
+
+    });
 
     this.notFound = function () {
         routing.setLocation('#/');
@@ -73,18 +44,17 @@ var routing = $.sammy(function () {
         viewModel.viewState.content(viewstate.content);
 
         console.log('D: setting mainview to:' + viewstate.mainview);
-        viewModel.viewState.mainview(viewstate.mainview);
+        viewModel.viewState.footer(viewstate.footer);
     }
 
 
-    function saveCurrentViewState(direction) {
-        if (typeof direction === 'undefined') direction = 'viewStateHistory';
+    function saveCurrentViewState() {
+
         var location = window.location.hash;
-        var mainview = viewModel.viewState.mainview();
-        var nav = viewModel.viewState.content();
-        var longPressMenu = viewModel.viewState.longPressMenu();
         var header = viewModel.viewState.header();
-        that[direction].push(new ViewState(location, mainview, nav, longPressMenu, header));
+        var content = viewModel.viewState.content();
+        var footer = viewModel.viewState.footer();
+        that.viewStateHistory.push(new ViewState(location, header, content, footer));
     }
 
     function restoreLastViewState() {

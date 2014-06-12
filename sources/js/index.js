@@ -1,5 +1,5 @@
+config = new Config();
 i18n = new I18n();
-
 viewModel = new ViewModel();
 geoLocation = new GeoLocation();
 
@@ -109,7 +109,7 @@ var app = {
                 if (!routing.isRunning()) {
                     routing.run();
                 }
-                routing.setLocation('#/');
+                routing.navigateTo("#/")
                 if (insidecordova) {
                 }
                 FastClick.attach(document.body);
