@@ -1,4 +1,0 @@
-jQuery.i18n.es.strings = {
-"timeout_message":"Problema de red (se ha expirado el tiempo de espera)!",
-
-}
