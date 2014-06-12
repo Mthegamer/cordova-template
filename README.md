@@ -36,7 +36,7 @@ Prerequisites
 
 
 
-How To Use (quick runthrough for android)
+How To Use (runthrough for android)
 ==========================================
 - install cordova, java, android sdk (not explained here)
 - open browser and navigate to the template project's index.html (like <project-home>/web-client/index.html ), enjoy the page
