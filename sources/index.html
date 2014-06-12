@@ -70,21 +70,22 @@ it defines just the basic structure with ids to be addressed
 <div data-bind="template: {name: viewState.content}" id="content"></div>
 <div data-bind="template: {name: viewState.footer}" id="footer"></div>
 
-<script class="externaltemplate" type="text/html" id="defaultHeader"><h1>Welcome to the cordova template!</h1></script>
+<script class="externaltemplate" type="text/html" id="defaultHeader"><h1 class="headr">Welcome to the cordova template!</h1></script>
 <script class="externaltemplate" type="text/html" id="defaultContent">
 
     If you see some coordinates, then most probably everything is working as expected.
     There is not much else to see... Watch how the position gets updated
     (this binding is done with knockout).
 
-    <br />
-    <b>Current position</b>
-    <p>
-        longitude:<b data-bind="text: geoLongitude"> </b><br />
-        latitude:<b data-bind="text: geoLatitude"> </b>
+    <br /><br />
+    <div class="boxheader">Current position</div>
+    <div class="coords">
+        longitude: <b data-bind="text: geoLongitude"> </b><br />
+        latitude: <b data-bind="text: geoLatitude"> </b>
 
-    </p></script>
-<script class="externaltemplate" type="text/html" id="defaultFooter"><hr class="footr" /><div class="footr">no rights reserved!</div></script>
+    </div>
+</script>
+<script class="externaltemplate" type="text/html" id="defaultFooter"><div class="footr" style="width: 100%;"><hr>no rights reserved!</div></script>
 
 
 </div>
