@@ -32,7 +32,7 @@ fi
 
 echo -e "\n************************************\nsyncing android resources"
 
-rsync -ah ../cordova/android/icon/* "$BUILD_DIR/$PROJECT_NAME"/platforms/android/res/
+rsync -ah "$WD"/../cordova/android/icon/* "$BUILD_DIR/$PROJECT_NAME"/platforms/android/res/
 echo "END: sync android resources"
 echo "*******************************************************************"
 

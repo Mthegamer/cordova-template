@@ -31,21 +31,21 @@ fi
 
 echo -e "\n************************************\npreparing ios resources"
 
-IOSRES="$BUILD_DIR/$PROJECT_NAME"/platforms/ios/project/Resources
+IOSRES="$BUILD_DIR/$PROJECT_NAME"/platforms/ios/"$PROJECT_NAME"/Resources
 
 if [ -d $IOSRES ]
 then
-    echo "removing ios resources"
+    echo "removing ios resources from $IOSRES"
     rm "$IOSRES"/icons/*
     rm "$IOSRES"/splash/*
 else
-    echo "something went wrong, ios resources dir does not exist!"
+    echo "ERROR: something went wrong, ios resources dir ($IOSRES) does not exist!"
     exit 1
 fi
 
 echo "copying ios resources"
-rsync -ah "$WD"../cordova/ios/icon/* "$IOSRES"/icons
-rsync -ah "$WD"../cordova/ios/screen/* "$IOSRES"/splash
+rsync -ah "$WD"/../cordova/ios/icon/* "$IOSRES"/icons
+rsync -ah "$WD"/../cordova/ios/screen/* "$IOSRES"/splash
 
 
 cd "$BUILDDIR"

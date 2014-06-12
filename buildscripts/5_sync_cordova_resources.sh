@@ -41,7 +41,7 @@ fi
 
 echo -e "\n************************************\ncopying cordova config"
 #cp cordova/config.xml "$WWWDIR"     #thats the wrong place
-cp ../cordova/config.xml "$BUILD_DIR/$PROJECT_NAME"
+cp "$WD"/../cordova/config.xml "$BUILD_DIR/$PROJECT_NAME"
 
 echo "END: cordova config"
 echo "*******************************************************************"
