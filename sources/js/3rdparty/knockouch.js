@@ -1,3 +1,7 @@
+//from https://github.com/yaroslavya/knockouch
+//MIT license - http://www.opensource.org/licenses/mit-license.php
+
+
 (function (window, ko) {
     var knockouch = function (library, options) {
         knockouch.options = options || {};

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#part of the cordova template at https://github.com/sk3l3t0r/cordova-template
+#author: android0x17@gmail.com
+
 cordova=`which cordova`
 
 echo "START: cordova iOS platform"

@@ -1,3 +1,5 @@
+// author: android0x17@gmail.com
+
 config = new Config();
 i18n = new I18n();
 viewModel = new ViewModel();

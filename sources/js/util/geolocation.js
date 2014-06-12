@@ -1,3 +1,5 @@
+// this is heavily insired by Greg Wilson's getAccurateCurrentPosition, see https://github.com/gwilson/getAccurateCurrentPosition
+// author: android0x17@gmail.com
 function GeoLocation() {
 
     var watchID = null;

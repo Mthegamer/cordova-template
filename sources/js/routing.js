@@ -1,3 +1,5 @@
+// author: android0x17@gmail.com
+
 var routing = $.sammy(function () {
 
     this.viewStateHistory = new Array();

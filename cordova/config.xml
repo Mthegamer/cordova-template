@@ -1,4 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
+<!--
+#part of the cordova template at https://github.com/sk3l3t0r/cordova-template
+#author: android0x17@gmail.com
+-->
+
 <widget id="org.project.mobile" version="1.0.0" xmlns="http://www.w3.org/ns/widgets"
         xmlns:gap="http://phonegap.com/ns/1.0">
     <name>project</name>

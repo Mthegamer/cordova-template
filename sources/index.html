@@ -1,4 +1,8 @@
 <!DOCTYPE HTML>
+<!--
+#part of the cordova template at https://github.com/sk3l3t0r/cordova-template
+#author: android0x17@gmail.com
+-->
 <html>
 <!--
 this is a one pager, elements are enriched with jquery and css
@@ -7,39 +11,40 @@ it defines just the basic structure with ids to be addressed
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-<!-- config -->
+    <!-- config -->
     <script src="js/config.js" type="text/javascript"></script>
 
-<!-- style -->
+    <!-- style -->
     <link rel="stylesheet" href="css/project.css" type="text/css">
 
-<!-- cordova (this is always present, although empty in dev mode) -->
+    <!-- cordova (this is always present, although empty in dev mode) -->
     <script src="cordova.js" type="text/javascript"></script>
 
-<!-- well... jquery... -->
+    <!-- well... jquery... -->
     <script src="js/3rdparty/jquery-2.1.1.min.js" type="text/javascript"></script>
 
-<!-- navigation with sammy.js -->
+    <!-- navigation with sammy.js -->
     <script src="js/3rdparty/sammy.min.js" type="text/javascript"></script>
 
-<!-- touch recognition with hammer.js -->
+    <!-- touch recognition with hammer.js -->
     <script src="js/3rdparty/hammer.js" type="text/javascript"></script>
 
-<!-- knockout as frontend mvc -->
+    <!-- knockout as frontend mvc -->
     <script src="js/3rdparty/knockout-3.0.0.js" type="text/javascript"></script>
 
-<!-- knockout binding for hammer -->
+    <!-- knockout binding for hammer -->
     <script src="js/3rdparty/knockouch.js" type="text/javascript"></script>
 
-<!-- speeds up touch -->
+    <!-- speeds up touch -->
     <script src='js/3rdparty/fastclick.js' type="text/javascript"></script>
 
-<!-- internationalization (i18n) -->
+    <!-- internationalization (i18n) -->
 
-    <script src='js/i18n/jquery.i18n.js' type='text/javascript'></script>
+    <script src='js/3rdparty/jquery.i18n.js' type='text/javascript'></script>
     <script src='js/i18n/jquery.de.json' type='text/javascript'></script>
     <script src='js/i18n/project.i18n.de.json' type='text/javascript'></script>
     <script src='js/i18n/jquery.en.json' type='text/javascript'></script>
@@ -50,15 +55,15 @@ it defines just the basic structure with ids to be addressed
     <script src='js/i18n/project.i18n.ca.json' type='text/javascript'></script>
     <script src='js/i18n/i18n.js' type='text/javascript'></script>
 
-<!-- knockout model -->
+    <!-- knockout model -->
     <script src="js/viewmodel/viewmodel.js" type="text/javascript"></script>
 
     <script src="js/util/geolocation.js" type="text/javascript"></script>
 
-<!-- navigation -->
+    <!-- navigation -->
     <script charset="utf-8" src="js/routing.js"></script>
 
-<!-- initial setup -->
+    <!-- initial setup -->
     <script charset="utf-8" src="js/index.js"></script>
 
 
@@ -66,28 +71,50 @@ it defines just the basic structure with ids to be addressed
 </head>
 <body id="roooot">
 <div id="knockmeout">
-<div data-bind="template: {name: viewState.header}" id="header"></div>
-<div data-bind="template: {name: viewState.content}" id="content"></div>
-<div data-bind="template: {name: viewState.footer}" id="footer"></div>
+    <div data-bind="template: {name: viewState.header}" id="header"></div>
+    <div data-bind="template: {name: viewState.content}" id="content"></div>
+    <div data-bind="template: {name: viewState.footer}" id="footer"></div>
 
-<script class="externaltemplate" type="text/html" id="defaultHeader"><h1 class="headr">Welcome to the cordova template!</h1></script>
-<script class="externaltemplate" type="text/html" id="defaultContent">
+    <script class="externaltemplate" type="text/html" id="defaultHeader"><h1 class="headr">Welcome to the cordova
+        template!</h1></script>
+    <script class="externaltemplate" type="text/html" id="defaultContent">
 
-    If you see some coordinates, then most probably everything is working as expected.
-    There is not much else to see... Watch how the position gets updated
-    (this binding is done with knockout).
+        If you see some coordinates, then most probably everything is working as expected.
+        There is not much else to see... Watch how the position gets updated
+        (this binding is done with knockout).
 
-    <br /><br />
-    <div class="boxheader">Current position</div>
-    <div class="coords">
-        longitude: <b data-bind="text: geoLongitude"> </b><br />
-        latitude: <b data-bind="text: geoLatitude"> </b>
+        <br/><br/>
 
-    </div>
-</script>
-<script class="externaltemplate" type="text/html" id="defaultFooter"><div class="footr" style="width: 100%;"><hr>no rights reserved!</div></script>
+        <div class="boxheader">Current position</div>
+        <div class="box">
+            longitude: <b data-bind="text: geoLongitude"> </b><br/>
+            latitude: <b data-bind="text: geoLatitude"> </b>
 
+        </div>
 
+        <br/>
+
+        <div class="boxheader">view details</div>
+        <div class="box">
+            viewmodel.viewstate.header=<b data-bind="text:$root.viewState.header"></b>
+            viewmodel.viewstate.content=<b data-bind="text:$root.viewState.content"></b>
+            viewmodel.viewstate.footer=<b data-bind="text:$root.viewState.footer"></b>
+        </div>
+
+        <br/>
+
+        <div class="boxheader">nav details</div>
+        <div class="box">
+            location=<b data-bind="text:routing.getLocation()"></b>
+        </div>
+    </script>
+    <script class="externaltemplate" type="text/html" id="defaultFooter">
+        <div class="footr">
+            <hr>
+            <img src="images/miniskeletor.jpg">
+            no rights reserved! author: android0x17@gmail.com
+        </div>
+    </script>
 </div>
 
 
