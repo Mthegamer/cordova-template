@@ -1,9 +1,9 @@
 cordova-skeleton 
 ================
 
-You want to start with cordova / phonegap? Here is a skeleton or template that provides you with basic stuff needed!
+Want to jumpstart a new cordova / phonegap project? You have multiple target platforms but want to maintain only (html5 web) source location? You want to use your app from desktop / mobile browser and a native app? Here is a skeleton / template that provides you with basic stuff needed! You don't have to mess around with phonegap build anymore. Includes some modernish HTML5 stuff for DOM-manipulation (jquery), mvc / mvvm & templating (Knockout.js), Geolocation
 
-WARNING: currently this project is not in a state to be used by beginners, maybe it is even just nonsense to others. It exists mainly for my own purposes. If you still want to try: good luck!
+WARNING: currently this project is not in a state to be used by beginners, maybe it is even just nonsense to others. It exists mainly for my own purposes. If you still want to try: good luck and share your experiences!
 
 If you have suggestions to change or improve, or even want to participate, you're very welcome to do so. See "Improvements for some distant future"
 
