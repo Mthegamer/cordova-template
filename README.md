@@ -27,7 +27,7 @@ Features
 
 Prerequisites
 =============
-- a machine that natively runs bash (preferably Linux or OSX) with working installations of the following:
+You need a machine that natively runs bash (preferably Linux or OSX) with working installations of the following:
 - java (needed for cordova / phonegap)
 - apache ant (needed for cordova / phonegap)
 - phonegap (2.x or 3.x)
