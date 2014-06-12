@@ -27,13 +27,11 @@ Features
 
 Prerequisites
 =============
-##For development
-A random machine with a text editor and a halfway modern browser suffices.
+**For development:** a random machine with a text editor and a halfway modern browser suffices.
 
-##For testing
-During development a browser (desktop / mobile) is enough, *however:* it's strongly recommended and easy to build mobile apps even during development. These can then be tested on the target devices / simulators.
+**For testing:** during development a browser (desktop / mobile) is enough, *however:* it's strongly recommended and easy to build mobile apps even during development. These can then be tested on the target devices / simulators.
 
-##For building
+**For building:**
 You need a machine that natively runs bash (preferably Linux or OSX) with working installations of the following:
 - java (needed for cordova / phonegap)
 - apache ant (needed for cordova / phonegap)
