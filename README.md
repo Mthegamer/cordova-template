@@ -10,19 +10,19 @@ If you have suggestions to change or improve, or even want to participate, you'r
 
 Features
 ========
-- **shared HTML5 source** for all platforms in contrast to "normal" phonegap per-target-platform-sourcecode
-- **demo application** showing use of cordova and some useful js-libs
-- **directory structure with template files** to guide you creating the necessary artifacts for cordova, android and ios
-- **build-scripts** that (under some premises) allow for instant complete (re)builds the whole cordova (phonegap) infrastructure
-- **DEMO APP** that provides useful infrastructure that you could use:
--- **built-in environment detection** detects if app is running in browser or app and the os-platform, allows to write environment-aware code
--- **builtin i18n** for multi-language apps
--- **builtin geolocation helper** provides better results and easier to use api than just using built-in html5 geolocation api
--- **builtin knockout.js** mvc / mvvm framework for js and databinding in fronend
--- **builtin hammer.js** recognizes touch-events, already wired up to Knockout.js using knockouch.js
+* **shared HTML5 source** for all platforms in contrast to "normal" phonegap per-target-platform-sourcecode
+* **demo application** showing use of cordova and some useful js-libs
+* **directory structure with template files** to guide you creating the necessary artifacts for cordova, android and ios
+* **build-scripts** that (under some premises) allow for complete or partial (re)builds of the app for mutiple paltforms at any time
+* **DEMO APP** that provides useful infrastructure that you could use:
+    * **built-in environment detection** detects if app is running in browser or app and the os-platform, allows to write environment-aware code
+    * **builtin i18n** for multi-language apps
+    * **builtin geolocation helper** provides better results and easier to use api than just using built-in html5 geolocation api
+    * **builtin knockout.js** mvc / mvvm framework for js and databinding in fronend
+    * **builtin hammer.js** recognizes touch-events, already wired up to Knockout.js using knockouch.js
 - works with different cordova-versions (depends on your local setup), as long as the command-line tools haven't changed
 - works with different android and ios versions (see cordova and platform configurations)
-- you can develop the whole app just using your favorite editor and a web-browser for local testing
+- develop just using your favorite editor
 - run and test using desktop / mobile browsers or simulators (these are provided from 3rd parties, not included here)
 
 
