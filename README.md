@@ -15,11 +15,11 @@ Features
 * **directory structure with template files** to guide you creating the necessary artifacts for cordova, android and ios
 * **build-scripts** that (under some premises) allow for complete or partial (re)builds of the app for mutiple paltforms at any time
 * **DEMO APP** that provides useful infrastructure that you could use:
-    * **built-in environment detection** detects if app is running in browser or app and the os-platform, allows to write environment-aware code
-    * **builtin i18n** for multi-language apps
-    * **builtin geolocation helper** provides better results and easier to use api than just using built-in html5 geolocation api
-    * **builtin knockout.js** mvc / mvvm framework for js and databinding in fronend
-    * **builtin hammer.js** recognizes touch-events, already wired up to Knockout.js using knockouch.js
+    * **environment detection** detects if app is running in browser or app and the os-platform, allows to write environment-aware code
+    * **i18n** for multi-language apps
+    * **geolocation helper** provides better results and easier to use api than just using built-in html5 geolocation api
+    * **knockout.js** mvc / mvvm framework for js and databinding in fronend
+    * **hammer.js** recognizes touch-events, already wired up to Knockout.js using knockouch.js
 - works with different cordova-versions (depends on your local setup), as long as the command-line tools haven't changed
 - works with different android and ios versions (see cordova and platform configurations)
 - develop just using your favorite editor
