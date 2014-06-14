@@ -11,10 +11,9 @@ If you have suggestions to change or improve, or even want to participate, you'r
 Features
 ========
 * **shared HTML5 source** for all platforms in contrast to "normal" phonegap per-target-platform-sourcecode
-* **demo application** showing use of cordova and some useful js-libs
+* **build-scripts** that (under some premises) allow for complete or partial (re)builds of the app for mutiple platforms at any time out of the shared source
 * **directory structure with template files** to guide you creating the necessary artifacts for cordova, android and ios
-* **build-scripts** that (under some premises) allow for complete or partial (re)builds of the app for mutiple platforms at any time
-* **DEMO APP** that provides useful infrastructure that you could use:
+* **DEMO APP** showing use of cordova and provides useful infrastructure that you could use:
     * **environment detection** detects if app is running in browser or app and the os-platform, allows to write environment-aware code
     * **i18n** for multi-language apps
     * **geolocation helper** provides better results and easier to use api than just using built-in html5 geolocation api
