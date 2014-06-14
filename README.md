@@ -13,7 +13,7 @@ Features
 * **shared HTML5 source** for all platforms in contrast to "normal" phonegap per-target-platform-sourcecode
 * **demo application** showing use of cordova and some useful js-libs
 * **directory structure with template files** to guide you creating the necessary artifacts for cordova, android and ios
-* **build-scripts** that (under some premises) allow for complete or partial (re)builds of the app for mutiple paltforms at any time
+* **build-scripts** that (under some premises) allow for complete or partial (re)builds of the app for mutiple platforms at any time
 * **DEMO APP** that provides useful infrastructure that you could use:
     * **environment detection** detects if app is running in browser or app and the os-platform, allows to write environment-aware code
     * **i18n** for multi-language apps
