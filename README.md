@@ -37,9 +37,10 @@ during development a browser (desktop / mobile) is enough, *however:* it's stron
 You need a machine that natively runs bash (preferably Linux or OSX) with working installations of the following:
 - java (needed for cordova / phonegap)
 - apache ant (needed for cordova / phonegap)
-- phonegap (2.x or 3.x)
-- android sdk (use lates available)
+- cordova / phonegap (3.x)
+- android sdk (use latest available)
 - ios sdk (i.e. xcode, ios simulator), required for ios builds, requires a Mac / OSX
+- see build.txt for detailed explanation
 
 
 
