@@ -53,7 +53,7 @@ function GeoLocation() {
         if (watchID == null) {
             if (config.debugMode)
                 console.log("geo: searching position");
-            geoLocation.useLastPosition();
+//            geoLocation.useLastPosition();
             geoLocation.stillInProgress = true;
             geoLocation.getPrecise();
         }
@@ -104,10 +104,10 @@ function GeoLocation() {
         console.log("geo: error: timeout");
     }
 
-    this.useLastPosition = function () {
-        if (config.debugMode)
-        console.log('geo: using last stored position.');
-    }
+//    this.useLastPosition = function () {
+//        if (config.debugMode)
+//        console.log('geo: using last stored position.');
+//    }
 
 
     this.checkAccuracy = function (position) {
