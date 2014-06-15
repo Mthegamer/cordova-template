@@ -81,8 +81,8 @@ it defines just the basic structure with ids to be addressed
     <script class="externaltemplate" type="text/html" id="defaultContent">
 
         If you see some coordinates, then most probably everything is working as expected.
-        There is not much else to see... Watch how the position gets updated
-        (this binding is done with knockout).
+
+
 
         <br/><br/>
 
@@ -95,37 +95,37 @@ it defines just the basic structure with ids to be addressed
 
         <br/>
 
-        <div class="boxheader">sample touch events</div>
+        <div class="boxheader">Test the touch interface</div>
         <div class="box">
             <br/>
 
-            <div class="box" data-bind="swipe: swipeHandler">
-                - - - - - - - - - swipe here  - - - - - - - - -
+            <div class="box center" data-bind="swipe: swipeHandler">
+              < - - - -  swipe here  - - - - - >
                 <br/>
             </div>
             <br/>
 
-            <div class="box" data-bind="doubletap: doubleTapHandler">
-                 - - - - - - - - - double tap here - - - - - - - - - -
+            <div class="box center" data-bind="doubletap: doubleTapHandler">
+              < - - - - double tap here - - - - >
                 <br/>
             </div>
         </div>
 
         <br/>
 
-        <div class="boxheader">view details</div>
+        <div class="boxheader">current templates</div>
         <div class="box">
-            viewmodel.viewstate.header=<b data-bind="text:$root.viewState.header()"></b><br/>
-            viewmodel.viewstate.content=<b data-bind="text:$root.viewState.content()"></b><br/>
-            viewmodel.viewstate.footer=<b data-bind="text:$root.viewState.footer()"></b>
+            header=<b data-bind="text:$root.viewState.header()"></b><br/>
+            content=<b data-bind="text:$root.viewState.content()"></b><br/>
+            footer=<b data-bind="text:$root.viewState.footer()"></b>
         </div>
 
         <br/>
 
         <div class="boxheader">nav details</div>
         <div class="box">
-            location=<b data-bind="text:routing.getLocation()"></b><br/>
-            routes=<b data-bind="text:getDefinedRoutes()"></b><br/>
+            location=<div data-bind="text:routing.getLocation()"></div><br/>
+            routes=<div data-bind="text:getDefinedRoutes()"></div><br/>
         </div>
     </script>
     <script class="externaltemplate" type="text/html" id="defaultFooter">

@@ -45,7 +45,7 @@ var routing = $.sammy(function () {
         console.log('D: setting content to: ' + viewstate.content);
         viewModel.viewState.content(viewstate.content);
 
-        console.log('D: setting mainview to:' + viewstate.mainview);
+        console.log('D: setting footer to:' + viewstate.footer);
         viewModel.viewState.footer(viewstate.footer);
     }
 

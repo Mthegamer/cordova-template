@@ -60,7 +60,6 @@ var app = {
         },
 
         exitApp: function () {
-            routing.stopNetworkUpdates();
             geoLocation.stopWatchingGeo();
             navigator.app.exitApp();
         },
