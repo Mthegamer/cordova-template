@@ -11,15 +11,20 @@ project_platform = "desktop";
 useragent = navigator.userAgent.toLowerCase();
 if (useragent.match(/android/)) {
     project_platform = 'android';
+    console.log("window._cordovaNative:"+window._cordovaNative);
 }
 if (useragent.match(/iphone/)) {
     project_platform = 'iphone';
+
+
 }
 if (useragent.match(/ipad/)) {
     project_platform = 'ipad';
+    console.log("window._nativeReady:"+window._nativeReady);
 }
 
-var insidecordova = ((document.URL.indexOf('http://') === -1) && (document.URL.indexOf('https://') === -1) && (document.URL.indexOf('file:///') === -1));
+//var insidecordova = ((document.URL.indexOf('http://') === -1) && (document.URL.indexOf('file:///') === -1));
+var insidecordova = false;
 
 
 var app = {
@@ -44,6 +49,7 @@ var app = {
         // function, we must explicity call 'app.receivedEvent(...);'
         onDeviceReady: function () {
             console.log("onDeviceReady");
+            insidecordova = true;
             app.devready();
             document.addEventListener('resume', app.resume, false);
             document.addEventListener('pause', app.pause, false);
@@ -112,14 +118,16 @@ var app = {
                 }
                 routing.navigateTo("#/")
                 if (insidecordova) {
+                    FastClick.attach(document.body);
                 }
-                FastClick.attach(document.body);
+
             });
         }
     }
     ;
 
-
+//console.log("window._nativeReady:"+window._nativeReady);
+//console.log("window._cordovaNative:"+window._cordovaNative);
 if (insidecordova) {
     project_env = 'cordova';
     console.log("running cordova app");

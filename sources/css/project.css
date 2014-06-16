@@ -21,8 +21,18 @@ body{
 .headr{
     margin-top: 0px;
     width: 100%;
+
     background-color: #484848;
     box-shadow:2px 2px 2px #666;
+}
+
+.headrtext {
+    margin-top: 0;
+    font-family: helvetiva, sans-serif;
+    font-size: 0.90em;
+    color: aliceblue;
+    padding: 15px;
+    text-align: left;
 }
 
 .content{
@@ -33,14 +43,22 @@ body{
 
 h1 {
     color: aliceblue;
-    text-align: center;
     font-size: 2em;
-    padding: 5px;
+    padding: 10px;
 }
 
+.left{
+    float: left;
+    width: 40%;
+    height: 100%;
+}
 
+.right{
+    float: right;
+    width: 40%;
+    height: 100%;
 
-
+}
 
 .box {
     border-style: solid;

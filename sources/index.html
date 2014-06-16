@@ -78,7 +78,7 @@ it defines just the basic structure with ids to be addressed
     <script class="externaltemplate" type="text/html" id="defaultHeader">
         <div class="headr">
             <h1>Welcome to the cordova template!</h1>
-            If you see some coordinates, then most probably everything is working as expected.
+            <div class="headrtext">most probably everything is working as expected, check the JavaScript console for messages...</div>
         </div>
 
     </script>
@@ -89,9 +89,18 @@ it defines just the basic structure with ids to be addressed
 
             <br/><br/>
 
+            <div class="boxheader">Environment</div>
+            <div class="box">
+                environment: <b data-bind="text: project_env"> </b>, platform: <b data-bind="text: project_platform"> </b>, cordova active: <b data-bind="text: insidecordova"> </b><br/>
+
+
+            </div>
+
+            <br/>
+
             <div class="boxheader">Current position</div>
             <div class="box">
-                longitude: <b data-bind="text: geoLongitude"> </b><br/>
+                longitude: <b data-bind="text: geoLongitude"> </b>,
                 latitude: <b data-bind="text: geoLatitude"> </b>
 
             </div>
@@ -100,26 +109,26 @@ it defines just the basic structure with ids to be addressed
 
             <div class="boxheader">Test the touch interface</div>
             <div class="box">
-                <br/>
 
-                <div class="box center" data-bind="swipe: swipeHandler">
-                    < - - - - swipe here - - - - - >
-                    <br/>
-                </div>
-                <br/>
 
-                <div class="box center" data-bind="doubletap: doubleTapHandler">
-                    < - - - - double tap here - - - - >
-                    <br/>
+                <div class="box" data-bind="swipe: swipeHandler">
+                    < - - - - swipe here - - - - - ><br>
+                    < - - - - left or right - - - - >
                 </div>
+                <br />
+                <div class="box left" data-bind="doubletap: doubleTapHandler">
+                    double tap<br>
+                    here
+                </div>
+                <br style="clear:both;"/>
             </div>
 
             <br/>
 
             <div class="boxheader">current templates</div>
             <div class="box">
-                header=<b data-bind="text:$root.viewState.header()"></b><br/>
-                content=<b data-bind="text:$root.viewState.content()"></b><br/>
+                header=<b data-bind="text:$root.viewState.header()"></b>,
+                content=<b data-bind="text:$root.viewState.content()"></b>,
                 footer=<b data-bind="text:$root.viewState.footer()"></b>
             </div>
 
@@ -137,6 +146,7 @@ it defines just the basic structure with ids to be addressed
         </div>
     </script>
     <script class="externaltemplate" type="text/html" id="defaultFooter">
+        <br/>
         <br/>
 
         <div class="footr">
