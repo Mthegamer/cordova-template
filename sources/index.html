@@ -78,20 +78,16 @@ it defines just the basic structure with ids to be addressed
     <script class="externaltemplate" type="text/html" id="defaultHeader">
         <div class="headr">
             <h1>Welcome to the cordova template!</h1>
-            <div class="headrtext">most probably everything is working as expected, check the JavaScript console for messages...</div>
         </div>
-
     </script>
 
     <script class="externaltemplate" type="text/html" id="defaultContent">
         <div class="content">
-
-
-            <br/><br/>
+            <br/>
 
             <div class="boxheader">Environment</div>
             <div class="box">
-                environment: <b data-bind="text: project_env"> </b>, platform: <b data-bind="text: project_platform"> </b>, cordova active: <b data-bind="text: insidecordova"> </b><br/>
+                environment: <b data-bind="text: project_env"> </b>, platform: <b data-bind="text: project_platform"> </b><br/>
 
 
             </div>
@@ -111,14 +107,18 @@ it defines just the basic structure with ids to be addressed
             <div class="box">
 
 
-                <div class="box" data-bind="swipe: swipeHandler">
-                    < - - - - swipe here - - - - - ><br>
-                    < - - - - left or right - - - - >
+                <div class="box" data-bind="swiperight: swipeHandler">
+                    < - - - - swipe right - - - - - ><br>
+                    < - - - - in this box - - - - >
                 </div>
                 <br />
                 <div class="box left" data-bind="doubletap: doubleTapHandler">
-                    double tap<br>
-                    here
+                    double tap here<br/>
+                    - - - - - - - - - - - -
+                </div>
+                <div class="box right" data-bind="hold: holdHandler">
+                    hold me<br />
+                    - - - - - - -
                 </div>
                 <br style="clear:both;"/>
             </div>

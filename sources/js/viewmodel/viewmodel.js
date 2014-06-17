@@ -42,4 +42,14 @@ ViewModel.prototype.doubleTapHandler = function ($data) {
     }
 }
 
+ViewModel.prototype.holdHandler = function ($data) {
+
+
+    if (insidecordova) {
+        navigator.notification.alert("you held me!", null, "hold registered", "yeah, I know...");
+    } else {
+        alert("you held me!")
+    }
+}
+
 

@@ -4,7 +4,7 @@
 * {
     margin-top: 0;
     font-family: helvetiva, sans-serif;
-    font-size: 1.02em;
+    font-size: 1.0em;
 
 }
 
@@ -21,7 +21,6 @@ body{
 .headr{
     margin-top: 0px;
     width: 100%;
-
     background-color: #484848;
     box-shadow:2px 2px 2px #666;
 }
@@ -36,14 +35,15 @@ body{
 }
 
 .content{
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
 h1 {
     color: aliceblue;
-    font-size: 2em;
+    font-size: 1.2em;
+    font-weight: bold;
     padding: 10px;
 }
 
