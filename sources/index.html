@@ -1,7 +1,22 @@
 <!DOCTYPE HTML>
 <!--
-#part of the cordova template at https://github.com/sk3l3t0r/cordova-template
-#author: android0x17@gmail.com
+ * part of the cordova template at https://github.com/sk3l3t0r/cordova-template
+ * author: android0x17@gmail.com
+ *
+ * Copyright 2014 android0x17
+ *
+ *   Licensed under the Apache License, Version 2.0 (the "License");
+ *   you may not use this file except in compliance with the License.
+ *   You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
+ */
 -->
 <html>
 <!--
@@ -21,10 +36,10 @@ it defines just the basic structure with ids to be addressed
     <!-- style -->
     <link rel="stylesheet" href="css/project.css" type="text/css">
 
-    <!-- cordova (this is always present, although empty in dev mode) -->
+    <!-- cordova (this is always present, although fake in dev mode) -->
     <script src="cordova.js" type="text/javascript"></script>
 
-    <!-- well... jquery... -->
+    <!-- jquery -->
     <script src="js/3rdparty/jquery-2.1.1.min.js" type="text/javascript"></script>
 
     <!-- navigation with sammy.js -->
@@ -43,7 +58,6 @@ it defines just the basic structure with ids to be addressed
     <script src='js/3rdparty/fastclick.js' type="text/javascript"></script>
 
     <!-- internationalization (i18n) -->
-
     <script src='js/3rdparty/jquery.i18n.js' type='text/javascript'></script>
     <script src='js/i18n/jquery.de.json' type='text/javascript'></script>
     <script src='js/i18n/project.i18n.de.json' type='text/javascript'></script>
@@ -56,6 +70,7 @@ it defines just the basic structure with ids to be addressed
     <!-- knockout model -->
     <script src="js/viewmodel/viewmodel.js" type="text/javascript"></script>
 
+    <!-- geolocation helper -->
     <script src="js/util/geolocation.js" type="text/javascript"></script>
 
     <!-- navigation -->
@@ -67,6 +82,7 @@ it defines just the basic structure with ids to be addressed
 
     <title id="page-title">Project</title>
 </head>
+
 <body id="roooot">
 <div id="knockmeout">
     <div data-bind="template: {name: $root.viewState.header()}" id="header"></div>
@@ -87,20 +103,24 @@ it defines just the basic structure with ids to be addressed
 
             <div class="boxheader">Environment</div>
             <div class="box">
-                environment: <b data-bind="text: project_env"> </b>, platform: <b data-bind="text: project_platform"> </b><br/>
+                <b data-bind="text: project_env"> </b>, platform: <b
+                    data-bind="text: project_platform"> </b><br/>
 
 
             </div>
+            <div class="boxfooter">the environment detected using index.js</div>
 
             <br/>
 
+
             <div class="boxheader">Current position</div>
             <div class="box">
+
                 longitude: <b data-bind="text: geoLongitude"> </b>,
                 latitude: <b data-bind="text: geoLatitude"> </b>
 
             </div>
-
+            <div class="boxfooter">the geographical position detected using geolocation.js</div>
             <br/>
 
             <div class="boxheader">Test the touch interface</div>
@@ -111,19 +131,21 @@ it defines just the basic structure with ids to be addressed
                     < - - - - swipe right - - - - - ><br>
                     < - - - - in this box - - - - >
                 </div>
-                <br />
+                <br/>
+
                 <div class="box left" data-bind="doubletap: doubleTapHandler">
                     double tap here<br/>
                     - - - - - - - - - - - -
                 </div>
                 <div class="box right" data-bind="hold: holdHandler">
-                    hold me<br />
+                    hold me<br/>
                     - - - - - - -
                 </div>
                 <br style="clear:both;"/>
             </div>
-
+            <div class="boxfooter">provided by hammer.js and knockouch.js, see index.html</div>
             <br/>
+
 
             <div class="boxheader">current templates</div>
             <div class="box">
@@ -131,18 +153,22 @@ it defines just the basic structure with ids to be addressed
                 content=<b data-bind="text:$root.viewState.content()"></b>,
                 footer=<b data-bind="text:$root.viewState.footer()"></b>
             </div>
+            <div class="boxfooter">templates used to display page, see index.html and viewmodel.js</div>
 
             <br/>
 
+
             <div class="boxheader">nav details</div>
             <div class="box">
-                location=
+
+                location of this page:
                 <div data-bind="text:routing.getLocation()"></div>
                 <br/>
-                routes=
+                defined routes in routing.js:
                 <div data-bind="text:getDefinedRoutes()"></div>
                 <br/>
             </div>
+            <div class="boxfooter">navigation details, using sammy.js</div>
         </div>
     </script>
     <script class="externaltemplate" type="text/html" id="defaultFooter">
@@ -151,12 +177,14 @@ it defines just the basic structure with ids to be addressed
 
         <div class="footr">
             <hr>
-            <img src="images/miniskeletor.jpg">
-            no rights reserved! author: android0x17@gmail.com
+
+            <img src="images/miniskeletor.jpg" class="footrpic">
+
+            <div class="footrtxt">Copyright 2014 android0x17@gmail.com, Licensed under the Apache License, Version 2.0
+            </div>
+            <br style="clear:both;"/>
         </div>
     </script>
 </div>
-
-
 </body>
 </html>
