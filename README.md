@@ -59,9 +59,7 @@ How To Use (runthrough for android)
 
 Improvements for some distant future
 ====================================
-- improve demo app to show all provided capabilities and more sample code
-- extend documentation so that beginners have at least a clue what's happening and where to turn the screws for changes
-- The whole half-bakedness of this project can be improved
 - The build scripts contain lots of stuff that could be parameterized and improved.
+- create / extend documentation so that beginners have at least a clue what's happening and where to turn the screws for changes
 - provide scripts for other target platforms (Tizen, Windows Mobile,...)
 - scripts for other build platforms (Windows, what else?)
