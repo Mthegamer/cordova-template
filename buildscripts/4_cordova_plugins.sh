@@ -39,7 +39,7 @@ INSTALLED_PLUGINS=`cordova plugins ls`
 
 ## declare all plugins that you need, see http://plugins.cordova.io
 #declare -a arr=("org.apache.cordova.dialogs" "org.apache.cordova.geolocation" "org.apache.cordova.device" "org.apache.cordova.camera" "org.apache.cordova.network-information" "org.apache.cordova.inappbrowser" "de.appplant.cordova.plugin.local-notification")
-declare -a arr=("org.apache.cordova.dialogs" "org.apache.cordova.geolocation" "org.apache.cordova.device" "org.apache.cordova.camera" "org.apache.cordova.network-information")
+declare -a arr=("org.apache.cordova.splashscreen" "org.apache.cordova.dialogs" "org.apache.cordova.geolocation" "org.apache.cordova.device" "org.apache.cordova.network-information")
 
 ## now loop through the above array
 for i in ${arr[@]}

@@ -54,7 +54,7 @@ echo "current directory:" $WD
 
 echo "creating cordova project"
 #echo -e "\n cordova create " $PROJECT_NAME $PROJECT_PACKAGE $BUILD_DIR
-cordova create $BUILD_DIR/$PROJECT_NAME   $PROJECT_PACKAGE  $PROJECT_NAME
+cordova create $BUILD_DIR/$PROJECT_NAME   $PROJECT_PACKAGE  $PROJECT_NAME #--link-to ../sources/
 
 if [ -d "$BUILD_DIR/$PROJECT_NAME" ]
 then

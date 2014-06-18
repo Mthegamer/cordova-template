@@ -44,20 +44,9 @@ else
     exit 1
 fi
 
-#
-#
-#if [ -d "$WWWDIR" ]
-#then
-#    echo ""
-#
-#else
-#    mkdir "$WWWDIR"
-#fi
-
 
 
 echo -e "\n************************************\ncopying cordova config"
-#cp cordova/config.xml "$WWWDIR"     #thats the wrong place
 cp "$WD"/../cordova/config.xml "$BUILD_DIR/$PROJECT_NAME"
 
 echo "END: cordova config"
