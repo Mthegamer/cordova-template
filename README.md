@@ -1,7 +1,7 @@
 cordova template with shared source
 ===================================
 
-**Jumpstart** a shared source cordova (phonegap) project! Focus on developing the app, using the already woven together HTML5 and JavaScript components. Build native apps for multiple platforms ANYTIME by just running a script without changing anything. All platforms share the same source!
+**Jumpstart** a shared source cordova (phonegap) project! Focus on developing the app, using the already woven together HTML5 and JavaScript components. Build native apps for multiple platforms _anytime_ by just running a script without changing anything. All platforms share the same source!
 
 While being aimed at experienced users, also Beginners in app-development may profit. Or maybe it is just nonsense to others. If you have suggestions to change or improve, or even want to participate, you're very welcome to do so. See "Improvements for some distant future"
 
